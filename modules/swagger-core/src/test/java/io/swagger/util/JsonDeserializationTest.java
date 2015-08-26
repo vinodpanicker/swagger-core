@@ -56,9 +56,7 @@ public class JsonDeserializationTest {
         final Swagger swagger = TestUtils.deserializeJsonFileFromClasspath("specFiles/securityDefinitions.json", Swagger.class);
 
         final List<SecurityRequirement> security = swagger.getSecurity();
-        final List<SecurityRequirement> securityRequirements = swagger.getSecurityRequirement();
         assertNotNull(security);
-        assertEquals(security, securityRequirements);
 
         assertEquals(security.size(), 2);
 

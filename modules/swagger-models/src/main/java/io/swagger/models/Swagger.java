@@ -1,6 +1,5 @@
 package io.swagger.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.models.auth.SecuritySchemeDefinition;
 import io.swagger.models.parameters.Parameter;
 
@@ -273,27 +272,10 @@ public class Swagger {
         this.securityDefinitions.put(name, securityDefinition);
     }
 
-    @Deprecated
-    public List<SecurityRequirement> getSecurityRequirement() {
-        return security;
-    }
-
-    @Deprecated
-    public void setSecurityRequirement(List<SecurityRequirement> securityRequirements) {
-        this.security = securityRequirements;
-    }
-
-    @Deprecated
-    public void addSecurityDefinition(SecurityRequirement securityRequirement) {
-        this.addSecurity(securityRequirement);
-    }
-
-    @JsonIgnore //remove JsonIgnore when getSecurityRequirement() method is deleted in next major version
     public List<SecurityRequirement> getSecurity() {
         return security;
     }
 
-    @JsonIgnore  //remove JsonIgnore when setSecurityRequirement() method is deleted in next major version
     public void setSecurity(List<SecurityRequirement> securityRequirements) {
         this.security = securityRequirements;
     }
