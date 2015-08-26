@@ -10,12 +10,12 @@
     <artifactId>swagger-project</artifactId>
     <packaging>pom</packaging>
     <name>swagger-project</name>
-    <version>1.5.3</version>
-    <url>https://github.com/swagger-api/swagger-core</url>
+    <version>1.5.3.0-restlet-SNAPSHOT</version>
+    <url>https://github.com/restlet/swagger-core</url>
     <scm>
-        <connection>scm:git:git@github.com:swagger-api/swagger-core.git</connection>
-        <developerConnection>scm:git:git@github.com:swagger-api/swagger-core.git</developerConnection>
-        <url>https://github.com/swagger-api/swagger-core</url>
+        <connection>scm:git:git@github.com:restlet/swagger-core.git</connection>
+        <developerConnection>scm:git:git@github.com:restlet/swagger-core.git</developerConnection>
+        <url>https://github.com/restlet/swagger-core</url>
     </scm>
     <prerequisites>
         <maven>2.2.0</maven>
@@ -29,7 +29,7 @@
     </developers>
     <issueManagement>
         <system>github</system>
-        <url>https://github.com/swagger-api/swagger-core/issues</url>
+        <url>https://github.com/restlet/swagger-core/issues</url>
     </issueManagement>
     <mailingLists>
         <mailingList>
@@ -78,6 +78,13 @@
         <directory>target</directory>
         <finalName>${project.artifactId}-${project.version}</finalName>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
@@ -554,6 +561,8 @@
         </dependencies>
     </dependencyManagement>
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
         <joda-version>1.2</joda-version>
         <joda-time-version>2.2</joda-time-version>
 
@@ -584,4 +593,16 @@
         <coverage.missed.classes>0</coverage.missed.classes>
         <commons-io-version>2.4</commons-io-version>
     </properties>
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <name>Nexus Release Repository</name>
+            <url>https://nexus.rest-let.com/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>https://nexus.rest-let.com/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
