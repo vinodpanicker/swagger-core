@@ -413,6 +413,16 @@
                 <module>samples/scala-oauth-authorization-server</module>
             </modules>
         </profile>
+        <profile>
+            <id>axway</id>
+            <distributionManagement>
+                <repository>
+                    <id>nexus-releases</id>
+                    <name>Nexus Release Repository</name>
+                    <url>https://nexus.rest-let.com/nexus/content/repositories/axway/</url>
+                </repository>
+            </distributionManagement>
+        </profile>
     </profiles>
     <modules>
         <module>modules/swagger-annotations</module>
