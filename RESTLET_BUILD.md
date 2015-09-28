@@ -1,6 +1,6 @@
 # How to deploy a new release to Restlet's Nexus
 
-- Run `mvn versions:set`.
+- Run `mvn versions:set -DgenerateBackupPoms=false`.
 - When prompted for the version, enter `<version-of-swagger-core>.<release-number>-restlet`. For example, if your branch is based on swagger-core 1.5.3 and it's the second Restlet release, then the version is `1.5.3.1-restlet`.
 - Commit the new POMs with the message `Release <version>`.
 - Tag this new commit with `v<version>`. For example, `v1.5.3.1-restlet`.
