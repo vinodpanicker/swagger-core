@@ -1,3 +1,7 @@
+*TODO, for the next release:*
+Transform this README to a bash script accompanied with its Jenkins job :)
+
+
 # How to deploy a new release to Restlet's Nexus
 
 - Run `mvn versions:set -DgenerateBackupPoms=false`.
