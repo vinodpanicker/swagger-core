@@ -4,6 +4,7 @@
 - When prompted for the version, enter `<version-of-swagger-core>.<release-number>-restlet`. For example, if your branch is based on swagger-core 1.5.3 and it's the second Restlet release, then the version is `1.5.3.1-restlet`.
 - Commit the new POMs with the message `Release <version>`.
 - Tag this new commit with `v<version>`. For example, `v1.5.3.1-restlet`.
+- Push the new tag.
 - Run `mvn deploy`.
 - Run `mvn deploy -Paxway` if you want to deploy the tag for Axway.
 - Run `mvn versions:set` again.
